@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.sound.midi.SysexMessage;
 public class patterns {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -140,7 +141,7 @@ public class patterns {
         //     System.out.println("");
         // }
 
-        //10.Triangle pattern of ACBD
+        //10.Triangle pattern of ABCD
         // for(int i=1;i<=n;i++){
         //     char ch = 'A';
         //     for(int j=1;j<=i;j++){
@@ -172,12 +173,12 @@ public class patterns {
         //     System.out.println();
         // }
         //11.2 Reverse Triangle pattern with ABCD
-        for (int i = 1; i <= n; i++) {
-            for (int j = i; j >= 1; j--) {
-                System.out.print((char) ('A' + j - 1) + " ");
-            }
-            System.out.println();
-        }
+        // for (int i = 1; i <= n; i++) {
+        //     for (int j = i; j >= 1; j--) {
+        //         System.out.print((char) ('A' + j - 1) + " ");
+        //     }
+        //     System.out.println();
+        // }
         
 
 
@@ -190,6 +191,40 @@ public class patterns {
         //     }
         //     System.out.println();
         // }
+        
+        //12.2.floyd's triangle pattern with ABCD
+        // char ch = 'A';
+        // for(int i=1;i<=n;i++){
+        //     for(int j=1;j<=i;j++){
+        //         System.out.print(ch+" ");
+        //         ch++;
+        //     }
+        //     System.out.println();
+        // }
+
+        //13.inverted triangle pattern with numbers
+        // for(int i=0;i<n;i++){
+        //     for(int j=0;j<i;j++){
+        //         System.out.print(" ");
+        //     }
+        //     for(int j=0;j<n-i;j++){
+        //         System.out.print(i+1);
+        //     }
+        //     System.out.println();
+        // }
+        
+        //13.2 inverted triangle pattern with ABCD
+        for(int i=0;i<n;i++){
+            char ch = 'A';
+            for(int j=0;j<i;j++){
+                System.out.print(" ");
+            }
+            for(int j=0;j<n-i;j++){
+                System.out.print((char)(ch+i));
+            }
+            System.out.println("");
+        }
+
 
         sc.close();
     }
